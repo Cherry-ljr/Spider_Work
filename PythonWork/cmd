@@ -1,0 +1,9 @@
+mysql -u root -p
+show databases;
+use OnlineJudge
+show tables;
+select * from UserProfile_shop;
+exit
+
+python spider.py
+python manage.py runserver

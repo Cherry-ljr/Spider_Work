@@ -1,0 +1,62 @@
+{% extends 'base.html' %}
+
+{% block title %}Online Judge{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <div class="col-md-4 col-md-offset-4">
+          <form class='form-login' action="/userinfo/" method="post">
+ 
+              {% if message %}
+                  <div class="alert alert-warning">{{ message }}</div>
+              {% endif %}
+ 
+              {% csrf_token %}
+ 
+              <h2 class="text-center">我的基本信息</h2>
+               {% for uf in userinfo %}
+                <div class="form-group">
+                    <label>用户名：</label>
+                    <input type="text" name='username' class="form-control" id="username" value={{uf.username}} readonly="readonly">
+                </div>
+              <div class="form-group">
+                    <label>学校：</label>
+                    <input type="text" name='school' class="form-control" id="school" value={{uf.school}} >
+                </div>
+              <div class="form-group">
+                    <label>专业：</label>
+                    <input type="text" name='major' class="form-control" id="major" value={{uf.major}} >
+                </div>
+              <div class="form-group">
+                    <label>班级：</label>
+                    <input type="text" name='myClass' class="form-control" id="myClass" value={{uf.myClass}} >
+                </div>
+              <div class="form-group">
+                    <label>学号：</label>
+                    <input type="text" name='stuId' class="form-control" id="stuId" value={{uf.stuId}} >
+                </div>
+                <div class="form-group">
+                    <label>头像：</label>
+                    <img src="{{ user.headImage.url }} " height="40" width="40"/>
+                </div>
+              <div class="form-group">
+                    <label>个人简介：</label>
+                    <input type="text" name='synopsis' class="form-control" id="synopsis" value={{uf.synopsis}} >
+                </div>
+            <div class="form-group">
+                    <label>邮箱：</label>
+                    <input type="text" name='email' class="form-control" id="email" value={{uf.email}} >
+                </div>
+             <div class="form-group">
+                    <label>手机号码：</label>
+                    <input type="text" name='tel' class="form-control" id="tel" value={{uf.tel}} >
+                </div>
+              {% endfor %}
+
+              <button type="reset" class="btn btn-default pull-left">重置</button>
+              <button type="submit" class="btn btn-primary pull-right">提交</button>
+ 
+          </form>
+        </div>
+    </div> <!-- /container -->
+{% endblock %}

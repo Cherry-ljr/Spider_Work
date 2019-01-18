@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% block title %}页面展示{% endblock %}
+{% block content %}
+{% for item in pagedata %}
+<li>{{item.title}}</li>
+<li>{{item.location}}</li>
+<li>{{item.price}}</li>
+<li>{{item.deal}}</li>
+<li>{{item.shop}}</li>
+{% endfor%}
+{% endblock %}

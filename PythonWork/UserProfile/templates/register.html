@@ -1,0 +1,70 @@
+{% extends 'base.html' %}
+
+{% block title %}注册{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <div class="col-md-4 col-md-offset-4">
+          <form class='form-login' action="/register/" method="post" enctype="multipart/form-data">
+ 
+              {% if message %}
+                  <div class="alert alert-warning">{{ message }}</div>
+              {% endif %}
+ 
+              {% csrf_token %}
+ 
+              <h2 class="text-center">欢迎注册</h2>
+              <div class="form-group">
+                  {{ uf.username.label_tag }}
+                  {{ uf.username}}
+              </div>
+              <div class="form-group">
+                  {{ uf.password.label_tag }}
+                  {{ uf.password }}
+              </div>
+              <div class="form-group">
+                  {{ uf.school.label_tag }}
+                  {{ uf.school }}
+              </div>
+              <div class="form-group">
+                  {{ uf.major.label_tag }}
+                  {{ uf.major }}
+              </div>
+              <div class="form-group">
+                  {{ uf.myClass.label_tag }}
+                  {{ uf.myClass }}
+              </div>
+              <div class="form-group">
+                  {{ uf.stuId.label_tag }}
+                  {{ uf.stuId }}
+              </div>
+              <div class="form-group">
+                  {{ uf.headImage.label_tag }}
+                  <input type="file" name="headImage" id="avatarUp" class="js-img-up"/>
+              </div>
+              <div class="form-group">
+                  {{ uf.synopsis.label_tag }}
+                  {{ uf.synopsis }}
+              </div>
+               <div class="form-group">
+                  {{ uf.email.label_tag }}
+                  {{ uf.email }}
+              </div>
+              <div class="form-group">
+                  {{ uf.tel.label_tag }}
+                  {{ uf.tel }}
+              </div>
+              
+              <div class="form-group">
+                  {{ uf.captcha.errors }}
+                  {{ uf.captcha.label_tag }}
+                  {{ uf.captcha }}
+              </div>
+ 
+              <button type="reset" class="btn btn-default pull-left">重置</button>
+              <button type="submit" class="btn btn-primary pull-right">提交</button>
+ 
+          </form>
+        </div>
+    </div> <!-- /container -->
+{% endblock %}

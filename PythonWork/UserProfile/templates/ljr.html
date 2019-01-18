@@ -1,0 +1,96 @@
+{% extends 'base.html' %}
+{% block title %}数据分析{% endblock %}
+{% block content %}
+
+<html>
+<head>
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+<style>
+body{padding:10px;margin:10px;}
+</style>
+</head>
+<body>
+
+<div id="slidershow" class="carousel" data-ride="carousel">
+<!-- 设置图片轮播的顺序 -->
+<ol class="carousel-indicators">
+</ol>
+<!-- 设置轮播图片 -->
+<div class="carousel-inner" align="center">
+<div class="item active">
+<h3>词云</h3>
+<a href="##"><img src="/static/词云.png" alt=""></a>
+<div class="carousel-caption">
+</div>
+</div>
+<div class="item">
+<h3>不同关键词的销量之和</h3>
+<a href="##"><img src="/static/不同关键词的销量之和.png" alt=""></a>
+<div class="carousel-caption">
+</div>
+</div>
+<div class="item">
+<h3>不同价格对应的商品数量分布</h3>
+<a href="##"><img src="/static/不同价格对应的商品数量分布.png" alt=""></a>
+<div class="carousel-caption">
+</div>
+</div>
+
+<div class="item">
+<h3>不同销量对应的商品数量分布</h3>
+<a href="##"><img src="/static/不同销量对应的商品数量分布.png" alt=""></a>
+<div class="carousel-caption">
+</div>
+</div>
+
+<div class="item">
+<h3>不同价格区间的商品的平均销量</h3>
+<a href="##"><img src="/static/不同价格区间的商品的平均销量.png" alt=""></a>
+<div class="carousel-caption">
+</div>
+</div>
+
+<div class="item">
+<h3>商品价格对销量的影响</h3>
+<a href="##"><img src="/static/商品价格对销量的影响.png" alt=""></a>
+<div class="carousel-caption">
+</div>
+</div>
+
+<div class="item">
+<h3>商品价格对销售额的影响</h3>
+<a href="##"><img src="/static/商品价格对销售额的影响.png" alt=""></a>
+<div class="carousel-caption">
+</div>
+</div>
+
+<div class="item">
+<h3>不同省份的商品数量分布</h3>
+<a href="##"><img src="/static/不同省份的商品数量分布.png" alt=""></a>
+<div class="carousel-caption">
+</div>
+</div>
+
+
+<div class="item">
+<h3>不同省份的商品平均销量分布</h3>
+<a href="##"><img src="/static/不同省份的商品平均销量分布.png" alt=""></a>
+<div class="carousel-caption">
+</div>
+</div>
+
+
+</div>
+<a class="left carousel-control " href="#slidershow" role="button" data-slide="prev">
+<span class="glyphicon glyphicon-chevron-left"></span>
+</a>
+<a class="right carousel-control" href="#slidershow" role="button" data-slide="next">
+<span class="glyphicon glyphicon-chevron-right"></span>
+</a>
+</div>
+<script src="http://libs.baidu.com/jquery/1.9.0/jquery.js"></script>
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+</body>
+</html>
+
+{% endblock %}
